@@ -1,0 +1,12 @@
+/* Focus styles converted from original HTML */
+.focus-ring:focus-visible {
+  outline: 3px solid #C2578A;
+  outline-offset: 3px;
+  border-radius: 9999px;
+}
+
+.focus-ring-rect:focus-visible {
+  outline: 3px solid #C2578A;
+  outline-offset: 3px;
+  border-radius: 0.75rem;
+}

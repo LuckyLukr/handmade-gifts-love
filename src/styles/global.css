@@ -1,0 +1,17 @@
+@import './tailwindLike.css';
+@import '../components/FocusStyles.css';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #FFF8FB;
+  color: #5F3B4E;
+}
+
+.appRoot {
+  font-family: Nunito, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
