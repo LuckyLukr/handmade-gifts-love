@@ -1,0 +1,131 @@
+.footer {
+  background-color: #4E3422;
+  color: #f9eee7;
+}
+
+.footer-inner {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.footer-top {
+  display: grid;
+  gap: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-top {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-logo-icon {
+  display: flex;
+  height: 2.75rem;
+  width: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.12);
+  font-size: 1.25rem;
+}
+
+.footer-logo-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+}
+
+.footer-logo-subtitle {
+  font-size: 0.8rem;
+  color: #d8b7a0;
+}
+
+.footer-brand-desc {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #d8b7a0;
+  max-width: 28rem;
+}
+
+.footer-nav-title {
+  font-size: 0.875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.footer-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-nav-link {
+  font-size: 0.95rem;
+  color: #d8b7a0;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-nav-link:hover {
+  color: #fff;
+}
+
+.footer-nav-text {
+  font-size: 0.95rem;
+  color: #d8b7a0;
+}
+
+.footer-bottom {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.footer-copy {
+  font-size: 0.875rem;
+  color: #b08c75;
+}
+
+.footer-made {
+  font-size: 0.875rem;
+  color: #b08c75;
+}
