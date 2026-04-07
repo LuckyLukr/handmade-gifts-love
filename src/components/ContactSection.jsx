@@ -1,54 +1,50 @@
 import React from 'react'
-import '../styles/ContactSection.css'
-
-const contacts = [
-  {
-    icon: '📞',
-    title: 'Telefon',
-    text: 'Zavolejte Marušce přímo. Ráda odpoví na dotazy a pomůže s objednávkou.',
-    link: 'tel:+420123456789',
-    linkLabel: '+420 123 456 789',
-  },
-  {
-    icon: '✉️',
-    title: 'E-mail',
-    text: 'Napište nám e-mail a ozveme se vám co nejdříve.',
-    link: 'mailto:maruska@korbacky.cz',
-    linkLabel: 'maruska@korbacky.cz',
-  },
-  {
-    icon: '📍',
-    title: 'Místo',
-    text: 'Výroba probíhá na Moravě. Osobní předání je možné po domluvě.',
-    link: null,
-    linkLabel: 'Morava, Česká republika',
-  },
-]
+import '../styles/contact.css'
 
 export default function ContactSection() {
   return (
-    <section id="kontakt" className="contact ornament-divider">
-      <div className="contact-inner">
-        <div className="section-header" style={{ marginBottom: '2rem' }}>
-          <h2 className="section-title font-serif">Kontakt</h2>
+    <section id="kontakt" className="contact-section">
+      <div className="container contact-inner">
+        <div className="section-header">
+          <h2 className="font-serif section-title">Kontakt</h2>
           <p className="section-desc">
-            Máte otázku, chcete se domluvit na objednávce nebo potřebujete poradit s výběrem? Ozvěte se Marušce.
+            Máte dotaz, chcete se domluvit na objednávce nebo potřebujete poradit s výběrem? Ozvěte se Marušce přímo.
           </p>
         </div>
 
         <div className="contact-grid">
-          {contacts.map((c) => (
-            <div key={c.title} className="contact-card">
-              <div className="contact-icon">{c.icon}</div>
-              <h3 className="contact-title">{c.title}</h3>
-              <p className="contact-text">{c.text}</p>
-              {c.link ? (
-                <a href={c.link} className="contact-link">{c.linkLabel}</a>
-              ) : (
-                <span className="contact-link" style={{ cursor: 'default' }}>{c.linkLabel}</span>
-              )}
-            </div>
-          ))}
+          <div className="contact-card shadow-soft">
+            <div className="contact-icon">✉️</div>
+            <h3 className="contact-card-title">E-mail</h3>
+            <p className="contact-card-text">objednavky@marusciny-korbacky.cz</p>
+            <a
+              href="mailto:objednavky@marusciny-korbacky.cz"
+              className="focus-ring contact-link"
+            >
+              Napsat e-mail
+            </a>
+          </div>
+
+          <div className="contact-card shadow-soft">
+            <div className="contact-icon">📞</div>
+            <h3 className="contact-card-title">Telefon</h3>
+            <p className="contact-card-text">+420 777 123 456</p>
+            <a
+              href="tel:+420777123456"
+              className="focus-ring contact-link"
+            >
+              Zavolat
+            </a>
+          </div>
+
+          <div className="contact-card shadow-soft">
+            <div className="contact-icon">📍</div>
+            <h3 className="contact-card-title">Oblast doručení</h3>
+            <p className="contact-card-text">Morava a okolí, domluvíme se individuálně.</p>
+            <a href="#objednat" className="focus-ring contact-link">
+              Objednat
+            </a>
+          </div>
         </div>
       </div>
     </section>
