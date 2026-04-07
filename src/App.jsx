@@ -46,9 +46,12 @@ export default function App() {
         <ContactSection />
       </main>
       <Footer />
-      {lightbox.open && (
-        <Lightbox src={lightbox.src} alt={lightbox.alt} onClose={closeLightbox} />
-      )}
+      <Lightbox
+        open={lightbox.open}
+        src={lightbox.src}
+        alt={lightbox.alt}
+        onClose={closeLightbox}
+      />
     </>
   )
 }

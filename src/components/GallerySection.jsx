@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/GallerySection.css'
+import '../styles/gallery.css'
 
 const galleryItems = [
   {
@@ -48,21 +48,21 @@ const galleryItems = [
 
 export default function GallerySection({ onOpenLightbox }) {
   return (
-    <section id="galerie" className="gallery ornament-divider">
-      <div className="gallery-inner">
+    <section id="galerie" className="ornament-divider gallery-section">
+      <div className="container gallery-inner">
         <div className="section-header">
-          <h2 className="section-title font-serif">Galerie korbáčků</h2>
+          <h2 className="font-serif section-title">Galerie korbáčků</h2>
           <p className="section-desc">
             Fotky ukazují hotové korbáčky i detaily domácí výroby. Kliknutím si můžete obrázky pohodlně zvětšit.
           </p>
         </div>
 
         <div className="gallery-grid">
-          {galleryItems.map((item) => (
+          {galleryItems.map((item, i) => (
             <button
-              key={item.full}
+              key={i}
               type="button"
-              className="gallery-item focus-ring-rect"
+              className="focus-ring-rect gallery-item shadow-soft"
               onClick={() => onOpenLightbox(item.full, item.alt)}
             >
               <img
@@ -71,9 +71,9 @@ export default function GallerySection({ onOpenLightbox }) {
                 className="gallery-img"
                 loading="lazy"
               />
-              <div className="gallery-info">
-                <h3 className="gallery-title">{item.title}</h3>
-                <p className="gallery-desc">{item.desc}</p>
+              <div className="gallery-caption">
+                <h3 className="gallery-caption-title">{item.title}</h3>
+                <p className="gallery-caption-desc">{item.desc}</p>
               </div>
             </button>
           ))}

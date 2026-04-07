@@ -1,7 +1,7 @@
 import React from 'react'
-import '../styles/WhyUsSection.css'
+import '../styles/whyus.css'
 
-const reasons = [
+const features = [
   { icon: '👐', title: 'Ruční výroba', desc: 'Každý kus prochází poctivou domácí přípravou.' },
   { icon: '🥛', title: 'Kvalitní suroviny', desc: 'Základem je kvalitní kravský sýr a čistá chuť.' },
   { icon: '📜', title: 'Tradiční receptura', desc: 'Vychází z osvědčeného postupu bez zbytečných kompromisů.' },
@@ -11,21 +11,21 @@ const reasons = [
 
 export default function WhyUsSection() {
   return (
-    <section id="proc-nase" className="why-us">
-      <div className="why-us-inner">
+    <section id="proc-nase" className="whyus-section">
+      <div className="container whyus-inner">
         <div className="section-header">
-          <h2 className="section-title font-serif">Proč právě naše korbáčky</h2>
+          <h2 className="font-serif section-title">Proč právě naše korbáčky</h2>
           <p className="section-desc">
             To nejdůležitější je jednoduché: dobré suroviny, poctivá práce a chuť, která zůstává věrná tradici.
           </p>
         </div>
 
-        <div className="why-grid">
-          {reasons.map((r) => (
-            <article key={r.title} className="why-card">
-              <div className="why-icon">{r.icon}</div>
-              <h3 className="why-title">{r.title}</h3>
-              <p className="why-desc">{r.desc}</p>
+        <div className="whyus-grid">
+          {features.map((f, i) => (
+            <article key={i} className="whyus-card shadow-soft">
+              <div className="whyus-icon">{f.icon}</div>
+              <h3 className="whyus-title">{f.title}</h3>
+              <p className="whyus-desc">{f.desc}</p>
             </article>
           ))}
         </div>
