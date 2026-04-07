@@ -1,0 +1,91 @@
+.about-section {
+  background-color: #FCF6EC;
+}
+
+.about-inner {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .about-inner {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.about-grid {
+  display: grid;
+  gap: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+.about-badge {
+  display: inline-block;
+  border-radius: 9999px;
+  background-color: #F6E3DF;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #B64032;
+}
+
+.about-title {
+  margin-top: 1.25rem;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #4E3422;
+}
+
+@media (min-width: 640px) {
+  .about-title {
+    font-size: 3rem;
+  }
+}
+
+.about-paragraph {
+  margin-top: 1.25rem;
+  font-size: 1.125rem;
+  line-height: 2;
+  color: #6d5442;
+}
+
+.about-cards {
+  border-radius: 2rem;
+  background-color: #fff;
+  padding: 2rem;
+}
+
+@media (min-width: 640px) {
+  .about-cards {
+    padding: 2.5rem;
+  }
+}
+
+.about-card-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.about-card {
+  border-radius: 1rem;
+  background-color: #FFFBF5;
+  padding: 1.25rem;
+}
+
+.about-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #4E3422;
+}
+
+.about-card-text {
+  margin-top: 0.5rem;
+  color: #6d5442;
+}

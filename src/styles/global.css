@@ -1,17 +1,98 @@
-@import './tailwindLike.css';
-@import '../components/FocusStyles.css';
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: #FFF8FB;
-  color: #5F3B4E;
-}
-
-.appRoot {
-  font-family: Nunito, system-ui, sans-serif;
+  background: #FFFBF5;
+  color: #5B4331;
+  font-family: 'Nunito', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.font-serif {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.focus-ring:focus-visible {
+  outline: 3px solid #B64032;
+  outline-offset: 3px;
+  border-radius: 9999px;
+}
+
+.focus-ring-rect:focus-visible {
+  outline: 3px solid #B64032;
+  outline-offset: 3px;
+  border-radius: 0.75rem;
+}
+
+.folklore-pattern {
+  background-image:
+    radial-gradient(circle at 20px 20px, rgba(182, 64, 50, 0.10) 2px, transparent 2px),
+    radial-gradient(circle at 60px 60px, rgba(122, 75, 42, 0.08) 2px, transparent 2px);
+  background-size: 80px 80px;
+}
+
+.ornament-divider {
+  position: relative;
+}
+
+.ornament-divider::after {
+  content: "✦ ✦ ✦";
+  display: block;
+  text-align: center;
+  letter-spacing: 0.6rem;
+  color: #B64032;
+  opacity: 0.45;
+  font-size: 1rem;
+  margin-top: 2.5rem;
+}
+
+/* Color utilities */
+.bg-cream { background-color: #FFFBF5; }
+.bg-beige { background-color: #F4E7D3; }
+.bg-sand { background-color: #E8D3B3; }
+.bg-soft { background-color: #FCF6EC; }
+.bg-accent { background-color: #B64032; }
+.bg-accent-soft { background-color: #F6E3DF; }
+.bg-brown { background-color: #4E3422; }
+.bg-cocoa { background-color: #7A4B2A; }
+
+.text-brown { color: #4E3422; }
+.text-cocoa { color: #7A4B2A; }
+.text-accent { color: #B64032; }
+.text-muted { color: #6d5442; }
+.text-muted-light { color: #7a6250; }
+
+.shadow-soft { box-shadow: 0 14px 35px rgba(122, 75, 42, 0.12); }
+
+/* Layout utilities */
+.container-7xl {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-7xl {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-7xl {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }

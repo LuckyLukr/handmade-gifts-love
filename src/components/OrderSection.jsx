@@ -1,155 +1,128 @@
-import React from 'react'
-import '../styles/tailwindLike.css'
+import React, { useState } from 'react'
+import '../styles/OrderSection.css'
 
 export default function OrderSection() {
-  const [form, setForm] = React.useState({
-    jmeno: '',
-    email: '',
-    telefon: '',
-    zprava: '',
-  })
+  const [form, setForm] = useState({ jmeno: '', email: '', telefon: '', zprava: '' })
 
-  const onChange = (e) => {
-    const { name, value } = e.target
-    setForm((p) => ({ ...p, [name]: value }))
+  const handleChange = (e) => {
+    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
-  const onSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault()
     const name = form.jmeno || 'Zákazník'
     const email = form.email || 'bez e-mailu'
     const phone = form.telefon || 'bez telefonu'
-    const message = form.zprava || 'Dobrý den, mám zájem o korábek.'
-    const subject = encodeURIComponent('Nezávazná poptávka z webu')
+    const message = form.zprava || 'Dobrý den, mám zájem o korbáčky.'
+    const subject = encodeURIComponent('Objednávka korbáčků z webu')
     const body = encodeURIComponent(
       'Dobrý den,\n\n' +
-        'jmenuji se ' +
-        name +
-        '.\n' +
-        'E-mail: ' +
-        email +
-        '\n' +
-        'Telefon: ' +
-        phone +
-        '\n\n' +
-        'Zpráva:\n' +
-        message +
-        '\n\n' +
-        'Děkuji.',
+      'jmenuji se ' + name + '.\n' +
+      'E-mail: ' + email + '\n' +
+      'Telefon: ' + phone + '\n\n' +
+      'Zpráva:\n' + message + '\n\n' +
+      'Děkuji.'
     )
-    window.location.href = 'mailto:objednavky@korabky-od-anicky.cz?subject=' + subject + '&body=' + body
+    window.location.href = 'mailto:objednavky@marusciny-korbacky.cz?subject=' + subject + '&body=' + body
   }
 
   return (
-    <section id="objednat" className="bg-cream">
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-        <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="rounded-[2rem] bg-brown p-8 text-white shadow-soft sm:p-10">
-            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#fbe4ef]">Objednávka</p>
-            <h2 className="mt-3 font-serif text-4xl font-bold sm:text-5xl">Máte vybraný korábek?</h2>
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-[#fff0f7]">
-              Napište mi e-mail nebo zavolejte. Stačí připojit představu o velikosti, stylu nebo barvě a domluvíme se jednoduše a osobně.
+    <section id="objednat" className="order-section bg-cream">
+      <div className="container-7xl order-inner">
+        <div className="order-grid">
+          <div className="order-contact shadow-soft">
+            <p className="order-contact-label">Kontakt a objednávka</p>
+            <h2 className="font-serif order-contact-title">Máte chuť na poctivé korbáčky?</h2>
+            <p className="order-contact-desc">
+              Napište Marušce e-mail nebo zavolejte. Stačí připojit informaci, o jakou variantu máte zájem,
+              kolik balení byste si přáli a zda preferujete klasické nebo chilli korbáčky.
             </p>
 
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <div className="order-contact-buttons">
               <a
-                href="mailto:objednavky@korabky-od-anicky.cz?subject=Objednávka%20korábku"
-                className="focus-ring rounded-full bg-white px-8 py-4 text-center text-lg font-extrabold text-brown transition-all duration-200 hover:bg-beige"
+                href="mailto:objednavky@marusciny-korbacky.cz?subject=Objednávka%20korbáčků"
+                className="focus-ring order-btn-email"
               >
                 Napsat e-mail
               </a>
-              <a
-                href="tel:+420777123456"
-                className="focus-ring rounded-full border-2 border-[#f7d9e7] px-8 py-4 text-center text-lg font-extrabold text-white transition-all duration-200 hover:bg-[#6d2f4f]"
-              >
+              <a href="tel:+420777123456" className="focus-ring order-btn-call">
                 Zavolat
               </a>
             </div>
 
-            <div className="mt-10 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-2xl bg-white/10 p-5">
-                <h3 className="text-xl font-bold">E-mail</h3>
-                <p className="mt-2 text-[#fff0f7]">objednavky@korabky-od-anicky.cz</p>
+            <div className="order-contact-info">
+              <div className="order-info-card">
+                <h3 className="order-info-title">E-mail</h3>
+                <p className="order-info-value">objednavky@marusciny-korbacky.cz</p>
               </div>
-              <div className="rounded-2xl bg-white/10 p-5">
-                <h3 className="text-xl font-bold">Telefon</h3>
-                <p className="mt-2 text-[#fff0f7]">+420 777 123 456</p>
+              <div className="order-info-card">
+                <h3 className="order-info-title">Telefon</h3>
+                <p className="order-info-value">+420 777 123 456</p>
               </div>
             </div>
           </div>
 
-          <aside className="rounded-[2rem] bg-white p-8 shadow-soft sm:p-10" aria-labelledby="kontaktni-formular">
-            <h2 id="kontaktni-formular" className="font-serif text-3xl font-bold text-brown">
-              Nezávazná poptávka
-            </h2>
-            <p className="mt-3 text-[#6b4c5c]">Můžete mi také poslat krátkou zprávu. Ozvu se co nejdříve zpět.</p>
+          <aside className="order-form-wrap shadow-soft" aria-labelledby="kontaktni-formular">
+            <h2 id="kontaktni-formular" className="font-serif order-form-title">Napsat Marušce</h2>
+            <p className="order-form-subtitle">
+              Vyplňte krátkou zprávu a objednávku můžete poslat rovnou e-mailem.
+            </p>
 
-            <form className="mt-8 space-y-5" onSubmit={onSubmit}>
-              <div>
-                <label htmlFor="jmeno" className="mb-2 block text-sm font-bold text-brown">
-                  Jméno
-                </label>
+            <form className="order-form" onSubmit={handleSubmit}>
+              <div className="form-field">
+                <label htmlFor="jmeno" className="form-label">Jméno</label>
                 <input
                   id="jmeno"
                   name="jmeno"
                   type="text"
                   placeholder="Například Jana Nováková"
+                  className="focus-ring-rect form-input"
                   value={form.jmeno}
-                  onChange={onChange}
-                  className="focus-ring-rect w-full rounded-2xl border border-[#f2cadc] bg-cream px-4 py-3 text-brown placeholder:text-[#b18498]"
+                  onChange={handleChange}
                 />
               </div>
 
-              <div>
-                <label htmlFor="email" className="mb-2 block text-sm font-bold text-brown">
-                  E-mail
-                </label>
+              <div className="form-field">
+                <label htmlFor="email" className="form-label">E-mail</label>
                 <input
                   id="email"
                   name="email"
                   type="email"
                   placeholder="vas@email.cz"
+                  className="focus-ring-rect form-input"
                   value={form.email}
-                  onChange={onChange}
-                  className="focus-ring-rect w-full rounded-2xl border border-[#f2cadc] bg-cream px-4 py-3 text-brown placeholder:text-[#b18498]"
+                  onChange={handleChange}
                 />
               </div>
 
-              <div>
-                <label htmlFor="telefon" className="mb-2 block text-sm font-bold text-brown">
-                  Telefon
-                </label>
+              <div className="form-field">
+                <label htmlFor="telefon" className="form-label">Telefon</label>
                 <input
                   id="telefon"
                   name="telefon"
                   type="tel"
                   placeholder="+420 123 456 789"
+                  className="focus-ring-rect form-input"
                   value={form.telefon}
-                  onChange={onChange}
-                  className="focus-ring-rect w-full rounded-2xl border border-[#f2cadc] bg-cream px-4 py-3 text-brown placeholder:text-[#b18498]"
+                  onChange={handleChange}
                 />
               </div>
 
-              <div>
-                <label htmlFor="zprava" className="mb-2 block text-sm font-bold text-brown">
-                  Co byste si přáli?
-                </label>
+              <div className="form-field">
+                <label htmlFor="zprava" className="form-label">Zpráva</label>
                 <textarea
                   id="zprava"
                   name="zprava"
-                  rows="5"
-                  placeholder="Mám zájem o střední korábek v jemných růžovo-bílých tónech jako dárek..."
+                  rows={5}
+                  placeholder="Dobrý den, mám zájem o 2 balení klasických korbáčků a 1 balení chilli varianty..."
+                  className="focus-ring-rect form-input form-textarea"
                   value={form.zprava}
-                  onChange={onChange}
-                  className="focus-ring-rect w-full rounded-2xl border border-[#f2cadc] bg-cream px-4 py-3 text-brown placeholder:text-[#b18498]"
+                  onChange={handleChange}
                 />
               </div>
 
-              <button
-                type="submit"
-                className="focus-ring w-full rounded-full bg-cocoa px-6 py-4 text-lg font-extrabold text-white transition-all duration-200 hover:bg-brown"
-              >
-                Odeslat poptávku
+              <button type="submit" className="focus-ring form-submit">
+                Odeslat objednávku
               </button>
             </form>
           </aside>
