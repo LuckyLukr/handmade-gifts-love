@@ -1,16 +1,20 @@
-.about-section {
-  background-color: #FCF6EC;
+.about {
+  background: var(--soft);
 }
 
 .about-inner {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  margin: 0 auto;
+  max-width: 80rem;
+  padding: 4rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .about-inner { padding: 4rem 1.5rem; }
 }
 
 @media (min-width: 1024px) {
   .about-inner {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding: 5rem 2rem;
   }
 }
 
@@ -29,27 +33,26 @@
 .about-badge {
   display: inline-block;
   border-radius: 9999px;
-  background-color: #F6E3DF;
+  background: var(--accent-soft);
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
   font-weight: 700;
-  color: #B64032;
+  color: var(--accent);
 }
 
 .about-title {
   margin-top: 1.25rem;
-  font-size: 2.25rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
   font-weight: 700;
-  color: #4E3422;
+  color: var(--brown);
 }
 
 @media (min-width: 640px) {
-  .about-title {
-    font-size: 3rem;
-  }
+  .about-title { font-size: 3rem; }
 }
 
-.about-paragraph {
+.about-text {
   margin-top: 1.25rem;
   font-size: 1.125rem;
   line-height: 2;
@@ -58,31 +61,30 @@
 
 .about-cards {
   border-radius: 2rem;
-  background-color: #fff;
+  background: #fff;
   padding: 2rem;
+  box-shadow: var(--shadow-soft);
 }
 
 @media (min-width: 640px) {
-  .about-cards {
-    padding: 2.5rem;
-  }
+  .about-cards { padding: 2.5rem; }
 }
 
-.about-card-grid {
+.about-card-list {
   display: grid;
   gap: 1rem;
 }
 
 .about-card {
   border-radius: 1rem;
-  background-color: #FFFBF5;
+  background: var(--cream);
   padding: 1.25rem;
 }
 
 .about-card-title {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #4E3422;
+  color: var(--brown);
 }
 
 .about-card-text {

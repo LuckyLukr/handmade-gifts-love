@@ -1,39 +1,39 @@
-.products-section {
-  background-color: #FFFBF5;
+.products {
+  background: var(--cream);
 }
 
 .products-inner {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  margin: 0 auto;
+  max-width: 80rem;
+  padding: 4rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .products-inner { padding: 4rem 1.5rem; }
 }
 
 @media (min-width: 1024px) {
-  .products-inner {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
+  .products-inner { padding: 5rem 2rem; }
 }
 
 .section-header {
+  margin: 0 auto;
   max-width: 48rem;
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
 }
 
 .section-title {
-  font-size: 2.25rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
   font-weight: 700;
-  color: #4E3422;
+  color: var(--brown);
 }
 
 @media (min-width: 640px) {
-  .section-title {
-    font-size: 3rem;
-  }
+  .section-title { font-size: 3rem; }
 }
 
-.section-subtitle {
+.section-desc {
   margin-top: 1rem;
   font-size: 1.125rem;
   line-height: 2;
@@ -47,24 +47,20 @@
 }
 
 @media (min-width: 1024px) {
-  .products-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+  .products-grid { grid-template-columns: 1fr 1fr; }
 }
 
 .product-card {
   border-radius: 1.5rem;
-  padding: 2rem;
-}
-
-.product-card-classic {
   border: 1px solid #eadcc7;
-  background-color: #fff;
+  background: #fff;
+  padding: 2rem;
+  box-shadow: var(--shadow-soft);
 }
 
-.product-card-chilli {
-  border: 2px solid #B64032;
-  background-color: #fff8f7;
+.product-card.featured {
+  border: 2px solid var(--accent);
+  background: #fff8f7;
 }
 
 .product-img-wrap {
@@ -79,43 +75,36 @@
   object-fit: cover;
 }
 
-.product-tag {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-}
-
-.product-tag-classic {
-  color: #B64032;
-}
-
-.product-tag-chilli {
-  color: #B64032;
-}
-
-.product-featured-badge {
+.product-badge-accent {
   display: inline-block;
+  margin-bottom: 1rem;
   border-radius: 9999px;
-  background-color: #B64032;
+  background: var(--accent);
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
   font-weight: 700;
   color: #fff;
-  margin-bottom: 1rem;
+}
+
+.product-type {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent);
 }
 
 .product-name {
   margin-top: 0.75rem;
   font-size: 1.875rem;
   font-weight: 800;
-  color: #4E3422;
+  color: var(--brown);
 }
 
 .product-desc {
   margin-top: 1rem;
   color: #6d5442;
-  line-height: 1.75;
+  line-height: 1.7;
 }
 
 .product-tags {
@@ -125,35 +114,30 @@
   gap: 0.75rem;
 }
 
-.product-pill {
+.product-tag {
   border-radius: 9999px;
+  background: var(--beige);
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
   font-weight: 700;
+  color: var(--brown);
 }
 
-.product-pill-beige {
-  background-color: #F4E7D3;
-  color: #4E3422;
-}
-
-.product-pill-accent {
-  background-color: #F6E3DF;
-  color: #B64032;
+.product-tag.accent {
+  background: var(--accent-soft);
+  color: var(--accent);
 }
 
 .product-btn {
   display: inline-block;
   margin-top: 2rem;
   border-radius: 9999px;
-  background-color: #B64032;
+  background: var(--accent);
   padding: 0.75rem 1.5rem;
   font-weight: 700;
   color: #fff;
   text-decoration: none;
-  transition: background-color 0.2s;
+  transition: background 0.2s;
 }
 
-.product-btn:hover {
-  background-color: #4E3422;
-}
+.product-btn:hover { background: var(--brown); }

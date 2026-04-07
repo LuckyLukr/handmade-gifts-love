@@ -34,8 +34,8 @@ const galleryItems = [
     thumb: 'https://picsum.photos/700/500?random=108',
     full: 'https://picsum.photos/1400/1000?random=108',
     alt: 'Chilli korbáčky s výraznější chutí',
-    title: 'Chilli korbáčky',
-    desc: 'Pro ty, kdo mají rádi tradiční chuť s pikantním akcentem.',
+    title: 'Ochucené varianty',
+    desc: 'Chilli, pepřové, česnekové i sladká paprika pro pestřejší výběr.',
   },
   {
     thumb: 'https://picsum.photos/700/500?random=109',
@@ -48,21 +48,21 @@ const galleryItems = [
 
 export default function GallerySection({ onOpenLightbox }) {
   return (
-    <section id="galerie" className="ornament-divider gallery-section">
-      <div className="container-7xl gallery-inner">
+    <section id="galerie" className="gallery ornament-divider">
+      <div className="gallery-inner">
         <div className="section-header">
-          <h2 className="font-serif section-title">Galerie korbáčků</h2>
-          <p className="section-subtitle">
+          <h2 className="section-title font-serif">Galerie korbáčků</h2>
+          <p className="section-desc">
             Fotky ukazují hotové korbáčky i detaily domácí výroby. Kliknutím si můžete obrázky pohodlně zvětšit.
           </p>
         </div>
 
         <div className="gallery-grid">
-          {galleryItems.map((item, idx) => (
+          {galleryItems.map((item) => (
             <button
-              key={idx}
+              key={item.full}
               type="button"
-              className="focus-ring-rect gallery-item shadow-soft"
+              className="gallery-item focus-ring-rect"
               onClick={() => onOpenLightbox(item.full, item.alt)}
             >
               <img
@@ -71,9 +71,9 @@ export default function GallerySection({ onOpenLightbox }) {
                 className="gallery-img"
                 loading="lazy"
               />
-              <div className="gallery-caption">
-                <h3 className="gallery-caption-title">{item.title}</h3>
-                <p className="gallery-caption-desc">{item.desc}</p>
+              <div className="gallery-info">
+                <h3 className="gallery-title">{item.title}</h3>
+                <p className="gallery-desc">{item.desc}</p>
               </div>
             </button>
           ))}

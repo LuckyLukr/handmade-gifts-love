@@ -18,6 +18,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+  --cream: #FFFBF5;
+  --beige: #F4E7D3;
+  --sand: #E8D3B3;
+  --cocoa: #7A4B2A;
+  --brown: #4E3422;
+  --soft: #FCF6EC;
+  --accent: #B64032;
+  --accent-soft: #F6E3DF;
+  --text-mid: #6d5442;
+  --text-light: #7a6250;
+  --shadow-soft: 0 14px 35px rgba(122, 75, 42, 0.12);
+}
+
 .font-serif {
   font-family: 'Cormorant Garamond', serif;
 }
@@ -56,42 +70,24 @@ body {
   margin-top: 2.5rem;
 }
 
-/* Color utilities */
-.bg-cream { background-color: #FFFBF5; }
-.bg-beige { background-color: #F4E7D3; }
-.bg-sand { background-color: #E8D3B3; }
-.bg-soft { background-color: #FCF6EC; }
-.bg-accent { background-color: #B64032; }
-.bg-accent-soft { background-color: #F6E3DF; }
-.bg-brown { background-color: #4E3422; }
-.bg-cocoa { background-color: #7A4B2A; }
-
-.text-brown { color: #4E3422; }
-.text-cocoa { color: #7A4B2A; }
-.text-accent { color: #B64032; }
-.text-muted { color: #6d5442; }
-.text-muted-light { color: #7a6250; }
-
-.shadow-soft { box-shadow: 0 14px 35px rgba(122, 75, 42, 0.12); }
-
-/* Layout utilities */
-.container-7xl {
-  max-width: 80rem;
+/* Layout helpers */
+.container {
   margin-left: auto;
   margin-right: auto;
+  max-width: 80rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
 @media (min-width: 640px) {
-  .container-7xl {
+  .container {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .container-7xl {
+  .container {
     padding-left: 2rem;
     padding-right: 2rem;
   }
