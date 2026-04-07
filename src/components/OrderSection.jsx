@@ -2,130 +2,128 @@ import React, { useState } from 'react'
 import '../styles/OrderSection.css'
 
 export default function OrderSection() {
-  const [form, setForm] = useState({ jmeno: '', email: '', telefon: '', zprava: '' })
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    product: '',
+    message: '',
+  })
 
   const handleChange = (e) => {
-    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }))
+    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const name = form.jmeno || 'Zákazník'
-    const email = form.email || 'bez e-mailu'
-    const phone = form.telefon || 'bez telefonu'
-    const message = form.zprava || 'Dobrý den, mám zájem o korbáčky.'
-    const subject = encodeURIComponent('Objednávka korbáčků z webu')
-    const body = encodeURIComponent(
-      'Dobrý den,\n\n' +
-      'jmenuji se ' + name + '.\n' +
-      'E-mail: ' + email + '\n' +
-      'Telefon: ' + phone + '\n\n' +
-      'Zpráva:\n' + message + '\n\n' +
-      'Děkuji.'
-    )
-    window.location.href = 'mailto:objednavky@marusciny-korbacky.cz?subject=' + subject + '&body=' + body
+    alert('Děkujeme za objednávku! Maruška vás brzy kontaktuje.')
+    setFormData({ name: '', email: '', phone: '', product: '', message: '' })
   }
 
   return (
-    <section id="objednat" className="order-section bg-cream">
-      <div className="container-7xl order-inner">
+    <section id="objednat" className="order">
+      <div className="order-inner">
         <div className="order-grid">
-          <div className="order-contact shadow-soft">
-            <p className="order-contact-label">Kontakt a objednávka</p>
-            <h2 className="font-serif order-contact-title">Máte chuť na poctivé korbáčky?</h2>
-            <p className="order-contact-desc">
-              Napište Marušce e-mail nebo zavolejte. Stačí připojit informaci, o jakou variantu máte zájem,
-              kolik balení byste si přáli a zda preferujete klasické nebo chilli korbáčky.
+          <div className="order-cta-box">
+            <p className="order-cta-label">Objednávka</p>
+            <h2 className="order-cta-title font-serif">Objednejte si poctivé moravské korbáčky</h2>
+            <p className="order-cta-desc">
+              Vyplňte formulář nebo nás kontaktujte přímo. Maruška se vám ozve a domluvíte vše potřebné – množství, variantu i způsob předání.
             </p>
-
-            <div className="order-contact-buttons">
-              <a
-                href="mailto:objednavky@marusciny-korbacky.cz?subject=Objednávka%20korbáčků"
-                className="focus-ring order-btn-email"
-              >
-                Napsat e-mail
-              </a>
-              <a href="tel:+420777123456" className="focus-ring order-btn-call">
-                Zavolat
-              </a>
+            <div className="order-cta-btns">
+              <a href="tel:+420123456789" className="order-btn-white focus-ring">📞 Zavolat Marušce</a>
+              <a href="mailto:maruska@korbacky.cz" className="order-btn-outline focus-ring">✉️ Napsat e-mail</a>
             </div>
-
-            <div className="order-contact-info">
+            <div className="order-info-grid">
               <div className="order-info-card">
-                <h3 className="order-info-title">E-mail</h3>
-                <p className="order-info-value">objednavky@marusciny-korbacky.cz</p>
+                <h3>Dodání</h3>
+                <p>Osobní předání nebo domluvená doprava v rámci Moravy.</p>
               </div>
               <div className="order-info-card">
-                <h3 className="order-info-title">Telefon</h3>
-                <p className="order-info-value">+420 777 123 456</p>
+                <h3>Minimální odběr</h3>
+                <p>Minimální objednávka je 1 kg jedné varianty.</p>
+              </div>
+              <div className="order-info-card">
+                <h3>Čerstvost</h3>
+                <p>Korbáčky se připravují na objednávku, vždy čerstvé.</p>
+              </div>
+              <div className="order-info-card">
+                <h3>Platba</h3>
+                <p>Hotově při předání nebo převodem na účet.</p>
               </div>
             </div>
           </div>
 
-          <aside className="order-form-wrap shadow-soft" aria-labelledby="kontaktni-formular">
-            <h2 id="kontaktni-formular" className="font-serif order-form-title">Napsat Marušce</h2>
-            <p className="order-form-subtitle">
-              Vyplňte krátkou zprávu a objednávku můžete poslat rovnou e-mailem.
-            </p>
-
-            <form className="order-form" onSubmit={handleSubmit}>
-              <div className="form-field">
-                <label htmlFor="jmeno" className="form-label">Jméno</label>
+          <div className="form-box">
+            <h2 className="form-title font-serif">Objednávkový formulář</h2>
+            <p className="form-desc">Vyplňte formulář a Maruška vás brzy kontaktuje.</p>
+            <form className="form-fields" onSubmit={handleSubmit}>
+              <div>
+                <label className="form-label" htmlFor="name">Jméno a příjmení *</label>
                 <input
-                  id="jmeno"
-                  name="jmeno"
+                  id="name"
+                  name="name"
                   type="text"
-                  placeholder="Například Jana Nováková"
-                  className="focus-ring-rect form-input"
-                  value={form.jmeno}
+                  className="form-input focus-ring-rect"
+                  placeholder="Jana Nováková"
+                  required
+                  value={formData.name}
                   onChange={handleChange}
                 />
               </div>
-
-              <div className="form-field">
-                <label htmlFor="email" className="form-label">E-mail</label>
+              <div>
+                <label className="form-label" htmlFor="email">E-mail *</label>
                 <input
                   id="email"
                   name="email"
                   type="email"
-                  placeholder="vas@email.cz"
-                  className="focus-ring-rect form-input"
-                  value={form.email}
+                  className="form-input focus-ring-rect"
+                  placeholder="jana@example.cz"
+                  required
+                  value={formData.email}
                   onChange={handleChange}
                 />
               </div>
-
-              <div className="form-field">
-                <label htmlFor="telefon" className="form-label">Telefon</label>
+              <div>
+                <label className="form-label" htmlFor="phone">Telefon</label>
                 <input
-                  id="telefon"
-                  name="telefon"
+                  id="phone"
+                  name="phone"
                   type="tel"
+                  className="form-input focus-ring-rect"
                   placeholder="+420 123 456 789"
-                  className="focus-ring-rect form-input"
-                  value={form.telefon}
+                  value={formData.phone}
                   onChange={handleChange}
                 />
               </div>
-
-              <div className="form-field">
-                <label htmlFor="zprava" className="form-label">Zpráva</label>
+              <div>
+                <label className="form-label" htmlFor="product">Varianta korbáčků *</label>
+                <input
+                  id="product"
+                  name="product"
+                  type="text"
+                  className="form-input focus-ring-rect"
+                  placeholder="Klasické, chilli, pepřové…"
+                  required
+                  value={formData.product}
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <label className="form-label" htmlFor="message">Zpráva / množství</label>
                 <textarea
-                  id="zprava"
-                  name="zprava"
-                  rows={5}
-                  placeholder="Dobrý den, mám zájem o 2 balení klasických korbáčků a 1 balení chilli varianty..."
-                  className="focus-ring-rect form-input form-textarea"
-                  value={form.zprava}
+                  id="message"
+                  name="message"
+                  rows={4}
+                  className="form-textarea focus-ring-rect"
+                  placeholder="Napište množství, případné dotazy nebo způsob předání…"
+                  value={formData.message}
                   onChange={handleChange}
                 />
               </div>
-
-              <button type="submit" className="focus-ring form-submit">
-                Odeslat objednávku
-              </button>
+              <button type="submit" className="form-submit focus-ring">Odeslat objednávku</button>
             </form>
-          </aside>
+          </div>
         </div>
       </div>
     </section>
