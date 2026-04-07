@@ -1,39 +1,48 @@
 import React from 'react'
-import '../styles/tailwindLike.css'
+import '../styles/ContactSection.css'
 
 export default function ContactSection() {
   return (
-    <section id="kontakt" className="bg-beige">
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-        <div className="grid gap-8 lg:grid-cols-3">
-          <article className="rounded-3xl bg-white p-8 shadow-soft">
-            <div className="text-3xl">📍</div>
-            <h2 className="mt-4 text-2xl font-bold text-brown">Kde vyrábím</h2>
-            <p className="mt-3 text-[#6b4c5c]">
-              Korábky vznikají doma, v klidném prostředí a po domluvě je možné řešit osobní předání i zaslání.
-            </p>
-          </article>
+    <section id="kontakt" className="contact-section">
+      <div className="container-7xl contact-inner">
+        <div className="section-header">
+          <h2 className="font-serif section-title">Kontakt</h2>
+          <p className="section-subtitle">
+            Máte otázku nebo si chcete rovnou objednat? Ozvěte se Marušce e-mailem nebo telefonicky.
+          </p>
+        </div>
 
-          <article className="rounded-3xl bg-white p-8 shadow-soft">
-            <div className="text-3xl">✉️</div>
-            <h2 className="mt-4 text-2xl font-bold text-brown">E-mail pro objednávky</h2>
-            <p className="mt-3 text-[#6b4c5c]">objednavky@korabky-od-anicky.cz</p>
+        <div className="contact-grid">
+          <div className="contact-card shadow-soft">
+            <div className="contact-icon">✉️</div>
+            <h3 className="contact-card-title">E-mail</h3>
+            <p className="contact-card-desc">Napište nám kdykoliv, odpovídáme obvykle do 24 hodin.</p>
             <a
-              href="mailto:objednavky@korabky-od-anicky.cz"
-              className="focus-ring mt-5 inline-block font-bold text-cocoa hover:text-brown"
+              href="mailto:objednavky@marusciny-korbacky.cz"
+              className="focus-ring contact-link"
             >
-              Napsat e-mail
+              objednavky@marusciny-korbacky.cz
             </a>
-          </article>
+          </div>
 
-          <article className="rounded-3xl bg-white p-8 shadow-soft">
-            <div className="text-3xl">📞</div>
-            <h2 className="mt-4 text-2xl font-bold text-brown">Telefon</h2>
-            <p className="mt-3 text-[#6b4c5c]">+420 777 123 456</p>
-            <a href="tel:+420777123456" className="focus-ring mt-5 inline-block font-bold text-cocoa hover:text-brown">
-              Zavolat
+          <div className="contact-card shadow-soft">
+            <div className="contact-icon">📞</div>
+            <h3 className="contact-card-title">Telefon</h3>
+            <p className="contact-card-desc">Volejte ve všední dny od 8 do 18 hodin.</p>
+            <a
+              href="tel:+420777123456"
+              className="focus-ring contact-link"
+            >
+              +420 777 123 456
             </a>
-          </article>
+          </div>
+
+          <div className="contact-card shadow-soft">
+            <div className="contact-icon">📍</div>
+            <h3 className="contact-card-title">Oblast doručení</h3>
+            <p className="contact-card-desc">Osobní odběr na Moravě, možnost zaslání poštou po dohodě.</p>
+            <span className="contact-location">Morava, Česká republika</span>
+          </div>
         </div>
       </div>
     </section>
