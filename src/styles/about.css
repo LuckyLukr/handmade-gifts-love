@@ -73,6 +73,19 @@
   gap: 1rem;
 }
 
+.about-img-wrap {
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: #FFFBF5;
+}
+
+.about-img {
+  height: 14rem;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .about-card {
   border-radius: 1rem;
   background-color: #FFFBF5;

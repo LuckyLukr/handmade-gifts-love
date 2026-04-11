@@ -39,6 +39,19 @@
   text-align: center;
 }
 
+.whyus-img-wrap {
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.whyus-img {
+  height: 8rem;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .whyus-icon {
   font-size: 2.5rem;
 }
