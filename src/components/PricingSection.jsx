@@ -2,11 +2,11 @@ import React from 'react'
 import '../styles/pricing.css'
 
 const priceItems = [
-  { name: 'Klasické korbáčky', desc: 'Jemná tradiční chuť z kvalitního kravského sýra', amount: '790 Kč' },
-  { name: 'Chilli korbáčky', desc: 'Tradiční korbáčky s pikantním chilli nádechem', amount: '890 Kč' },
-  { name: 'Pepřové korbáčky', desc: 'Ochucená varianta s výraznější pepřovou chutí', amount: '890 Kč' },
-  { name: 'Česnekové korbáčky', desc: 'Poctivé korbáčky s jemným česnekovým dochucením', amount: '890 Kč' },
-  { name: 'Korbáčky se sladkou paprikou', desc: 'Ochucená varianta se sladkou paprikou a plnější chutí', amount: '890 Kč' },
+  { name: 'Klasické korbáčky', desc: 'Jemná tradiční chuť z kravského sýra', amount: '790 Kč', alt: false },
+  { name: 'Chilli korbáčky', desc: 'Pikantnější varianta pro výraznější chuť', amount: '890 Kč', alt: true },
+  { name: 'Pepřové korbáčky', desc: 'Lehce kořeněná chuť s pepřovým tónem', amount: '890 Kč', alt: false },
+  { name: 'Česnekové korbáčky', desc: 'Oblíbená varianta s jemným česnekovým dochucením', amount: '890 Kč', alt: true },
+  { name: 'Sladká paprika', desc: 'Voňavá varianta s jemně paprikovým tónem', amount: '890 Kč', alt: false },
 ]
 
 export default function PricingSection() {
@@ -33,7 +33,7 @@ export default function PricingSection() {
               </thead>
               <tbody className="pricing-tbody">
                 {priceItems.map((item, i) => (
-                  <tr key={i}>
+                  <tr key={i} style={item.alt ? { backgroundColor: '#fffaf3' } : {}}>
                     <td className="pricing-td pricing-td--name">{item.name}</td>
                     <td className="pricing-td">{item.desc}</td>
                     <td className="pricing-td">1 kg</td>
@@ -43,12 +43,6 @@ export default function PricingSection() {
               </tbody>
             </table>
           </div>
-        </div>
-
-        <div className="pricing-note shadow-soft">
-          <p className="pricing-note-text">
-            Máte zájem o větší množství, dárkové balení nebo se chcete zeptat na další varianty? Napište Marušce a vše se dá domluvit osobně.
-          </p>
         </div>
       </div>
     </section>

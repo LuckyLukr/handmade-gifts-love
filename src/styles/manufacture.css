@@ -1,0 +1,85 @@
+.manufacture-section {
+  background-color: #FFFBF5;
+}
+
+.manufacture-inner {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .manufacture-inner {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.manufacture-grid {
+  display: grid;
+  gap: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .manufacture-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+.manufacture-badge {
+  display: inline-block;
+  border-radius: 9999px;
+  background-color: #F4E7D3;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #4E3422;
+}
+
+.manufacture-title {
+  margin-top: 1.25rem;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #4E3422;
+}
+
+@media (min-width: 640px) {
+  .manufacture-title {
+    font-size: 3rem;
+  }
+}
+
+.manufacture-para {
+  margin-top: 1.25rem;
+  font-size: 1.125rem;
+  line-height: 2;
+  color: #6d5442;
+}
+
+.manufacture-cards {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.manufacture-card {
+  border-radius: 1.5rem;
+  background-color: #fff;
+  padding: 1.5rem;
+}
+
+.manufacture-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4E3422;
+}
+
+.manufacture-list {
+  margin-top: 1rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  color: #6d5442;
+  font-size: 1rem;
+  line-height: 1.75;
+}

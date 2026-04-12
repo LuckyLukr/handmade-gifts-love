@@ -1,5 +1,5 @@
 .contact-section {
-  background-color: #F4E7D3;
+  background-color: #FFFBF5;
 }
 
 .contact-inner {
@@ -21,41 +21,116 @@
 
 @media (min-width: 1024px) {
   .contact-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-.contact-card {
-  border-radius: 1.5rem;
+.contact-card-main {
+  border-radius: 2rem;
   background-color: #fff;
   padding: 2rem;
 }
 
-.contact-icon {
-  font-size: 1.875rem;
+@media (min-width: 640px) {
+  .contact-card-main {
+    padding: 2.5rem;
+  }
 }
 
-.contact-title {
-  margin-top: 1rem;
-  font-size: 1.5rem;
+.contact-main-title {
+  font-size: 2.25rem;
   font-weight: 700;
   color: #4E3422;
 }
 
-.contact-text {
-  margin-top: 0.75rem;
+.contact-main-desc {
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  line-height: 2;
   color: #6d5442;
 }
 
-.contact-link {
-  display: inline-block;
-  margin-top: 1.25rem;
+.contact-details {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contact-detail-label {
+  font-size: 0.75rem;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
   color: #B64032;
+}
+
+.contact-detail-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #4E3422;
   text-decoration: none;
   transition: color 0.2s;
 }
 
-.contact-link:hover {
+.contact-detail-link:hover {
+  color: #B64032;
+}
+
+.contact-detail-text {
+  margin-top: 0.5rem;
+  color: #6d5442;
+}
+
+.contact-how-card {
+  border-radius: 2rem;
+  background-color: #F4E7D3;
+  padding: 2rem;
+}
+
+@media (min-width: 640px) {
+  .contact-how-card {
+    padding: 2.5rem;
+  }
+}
+
+.contact-how-title {
+  font-size: 1.875rem;
+  font-weight: 700;
   color: #4E3422;
+}
+
+.contact-how-list {
+  margin-top: 1.5rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.125rem;
+  color: #6d5442;
+}
+
+.contact-how-num {
+  font-weight: 700;
+  color: #4E3422;
+}
+
+.contact-tip {
+  margin-top: 2rem;
+  border-radius: 1.5rem;
+  background-color: #fff;
+  padding: 1.5rem;
+}
+
+.contact-tip-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #4E3422;
+}
+
+.contact-tip-text {
+  margin-top: 0.5rem;
+  color: #6d5442;
 }

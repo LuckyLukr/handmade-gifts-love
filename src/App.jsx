@@ -6,6 +6,7 @@ import ProductsSection from './components/ProductsSection'
 import GallerySection from './components/GallerySection'
 import WhyUsSection from './components/WhyUsSection'
 import PricingSection from './components/PricingSection'
+import ManufactureSection from './components/ManufactureSection'
 import OrderSection from './components/OrderSection'
 import ContactSection from './components/ContactSection'
 import Footer from './components/Footer'
@@ -42,6 +43,7 @@ export default function App() {
         <GallerySection onOpenLightbox={openLightbox} />
         <WhyUsSection />
         <PricingSection />
+        <ManufactureSection />
         <OrderSection />
         <ContactSection />
       </main>
