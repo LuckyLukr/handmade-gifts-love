@@ -1,4 +1,4 @@
-# Korbáčky od babičky Marušky | Ručně vyráběné dárky s láskou
+# Korbáčky od babičky Marušky | Ručně vyráběné
 
 Vytvoř jednoduchý, přehledný a milý web pro babičku, která ručně vyrábí korábky. Styl má být útulný, domácí a důvěryhodný, s jemnými barvami a velkými dobře čitelnými písmy.
 
@@ -36,4 +36,4 @@ Built with React + Vite. Deployed via Jean AI.
 
 ## Images
 
-This project includes 2 user-supplied image(s) in `public/images/`.
+This project includes 6 user-supplied image(s) in `public/images/`.
