@@ -45,8 +45,8 @@ export default function HeroSection() {
           <div className="hero-blur-right"></div>
           <div className="hero-image-frame shadow-soft">
             <img
-              src="https://picsum.photos/1200/900?random=101"
-              alt="Tradiční moravské korbáčky z kravského sýra naservírované na talíři"
+              src="/images/hero-1.png"
+              alt="Ručně vyráběné korbáčky od babičky Marušky"
               className="hero-image"
             />
           </div>

@@ -30,7 +30,7 @@ export default function Footer() {
 
         <div className="footer-img-wrap shadow-soft">
           <img
-            src="https://picsum.photos/900/600?random=301"
+            src="/images/footer-1.png"
             alt="Domácí balení korbáčků připravené pro zákazníky"
             className="footer-img"
             loading="lazy"
