@@ -3,7 +3,7 @@ import '../styles/contact.css'
 
 export default function ContactSection() {
   return (
-    <section id="kontakt" className="contact-section">
+    <section id="kontakt" className="contact-section contact-section--cream">
       <div className="container contact-inner">
         <div className="contact-grid">
           <div className="contact-card-main shadow-soft">

@@ -3,11 +3,15 @@
   background-color: #FCF6EC;
 }
 
+.footer-main {
+  padding-top: 2.5rem;
+  padding-bottom: 0;
+}
+
 .footer-grid {
   display: grid;
   gap: 2rem;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding-bottom: 2rem;
   align-items: center;
 }
 
@@ -74,9 +78,10 @@
   display: block;
 }
 
-.footer-bottom {
+.footer-bottom-inner {
   border-top: 1px solid #eadcc7;
-  padding: 1.25rem 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   text-align: center;
   font-size: 0.875rem;
   color: #7a6250;
