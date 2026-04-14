@@ -24,7 +24,7 @@ export default function AboutSection() {
             <div className="about-card-grid">
               <div className="about-img-wrap">
                 <img
-                  src="https://picsum.photos/900/600"
+                  src="https://picsum.photos/900/600?random=102"
                   alt="Korbáčky položené na dřevěném prkénku"
                   className="about-img"
                 />

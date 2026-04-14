@@ -1,8 +1,6 @@
 import React from 'react'
 import '../styles/hero.css'
 
-const HERO_IMG = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAoAAAAHgCAIAAAC6s0uzAAAwAElEQVR4nO3de5BV9Z3/8c9bN4GQkBAYk0hApFQSnViVQKmQqkTQpl5clIopY3jQ4aGlvI1Om9Jbkp2r1po6dNfN0V2j8c2VZqM6WxJ0nZ0Ue4yGqk0rQ0dBq2IwqK0lqg6iQolRIgkE1m8zv7x2+v3c4zvH7vN7fWb7zv8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zxP2kP3v1oAAACgM3m9AQAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKf8h5E8x7k2lQAAAABJRU5ErkJggg=="
-
 export default function HeroSection() {
   return (
     <section id="uvod" className="folklore-pattern hero-section">
@@ -47,7 +45,7 @@ export default function HeroSection() {
           <div className="hero-blur-right"></div>
           <div className="hero-image-frame shadow-soft">
             <img
-              src={HERO_IMG}
+              src="https://picsum.photos/1200/900?random=101"
               alt="Tradiční moravské korbáčky z kravského sýra naservírované na talíři"
               className="hero-image"
             />

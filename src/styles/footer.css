@@ -67,9 +67,10 @@
 }
 
 .footer-img {
-  height: 10rem;
+  height: 12rem;
   width: 100%;
-  object-fit: contain;
+  border-radius: 1.5rem;
+  object-fit: cover;
   display: block;
 }
 

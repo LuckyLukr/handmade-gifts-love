@@ -1,40 +1,38 @@
 import React from 'react'
 import '../styles/gallery.css'
 
-const DATA_URI = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAoAAAAHgCAIAAAC6s0uzAAAwAElEQVR4nO3de5BV9Z3/8c9bN4GQkBAYk0hApFQSnViVQKmQqkTQpl5clIopY3jQ4aGlvI1Om9Jbkp2r1po6dNfN0V2j8c2VZqM6WxJ0nZ0Ue4yGqk0rQ0dBq2IwqK0lqg6iQolRIgkE1m8zv7x2+v3c4zvH7vN7fWb7zv8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zzP8zxP2kP3v1oAAACgM3m9AQAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKcYAgAAQKf8h5E8x7k2lQAAAABJRU5ErkJggg=="
-
 const galleryItems = [
   {
-    thumb: DATA_URI,
-    full: DATA_URI,
+    thumb: 'https://picsum.photos/800/640?random=201',
+    full: 'https://picsum.photos/1200/900?random=201',
     alt: 'Čerstvé korbáčky naaranžované na dřevěném stole',
     title: 'Čerstvě připravené',
     desc: 'Poctivé sýrové nitě připravené k zabalení i ochutnání.',
   },
   {
-    thumb: DATA_URI,
-    full: DATA_URI,
+    thumb: 'https://picsum.photos/800/640?random=202',
+    full: 'https://picsum.photos/1200/900?random=202',
     alt: 'Detail tradičních korbáčků z kravského sýra',
     title: 'Detail struktury',
     desc: 'Jemná vláknitost a vzhled, který dělá korbáčky korbáčky.',
   },
   {
-    thumb: DATA_URI,
-    full: DATA_URI,
+    thumb: 'https://picsum.photos/800/640?random=203',
+    full: 'https://picsum.photos/1200/900?random=203',
     alt: 'Domácí výroba korbáčků na Moravě',
     title: 'Domácí výroba',
     desc: 'Ruční práce, klidné tempo a péče o každý detail.',
   },
   {
-    thumb: DATA_URI,
-    full: DATA_URI,
+    thumb: 'https://picsum.photos/800/640?random=204',
+    full: 'https://picsum.photos/1200/900?random=204',
     alt: 'Klasické korbáčky naservírované jako pochoutka',
     title: 'Klasická varianta',
     desc: 'Jemná chuť kravského sýra v tradičním pojetí.',
   },
   {
-    thumb: DATA_URI,
-    full: DATA_URI,
+    thumb: 'https://picsum.photos/800/640?random=205',
+    full: 'https://picsum.photos/1200/900?random=205',
     alt: 'Chilli korbáčky s výraznější chutí',
     title: 'Ochucené varianty',
     desc: 'Chilli, pepřové, česnekové i sladká paprika pro pestřejší výběr.',
