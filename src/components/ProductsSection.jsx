@@ -15,14 +15,6 @@ export default function ProductsSection() {
 
         <div className="products-grid">
           <article className="product-card product-card--classic shadow-soft">
-            <div className="product-img-wrap">
-              <img
-                src="https://picsum.photos/900/640?random=1"
-                alt="Klasické korbáčky z kravského sýra"
-                className="product-img"
-                loading="lazy"
-              />
-            </div>
             <p className="product-tag">Tradiční varianta</p>
             <h3 className="product-name">Klasické korbáčky</h3>
             <p className="product-desc">
@@ -39,14 +31,6 @@ export default function ProductsSection() {
           </article>
 
           <article className="product-card product-card--spicy shadow-soft">
-            <div className="product-img-wrap">
-              <img
-                src="https://picsum.photos/900/640?random=2"
-                alt="Ochucené korbáčky s výraznější chutí"
-                className="product-img"
-                loading="lazy"
-              />
-            </div>
             <div className="product-highlight-badge">Výraznější chuť</div>
             <p className="product-tag">Ochucené varianty</p>
             <h3 className="product-name">Chilli, pepřové, česnekové a sladká paprika</h3>

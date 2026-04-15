@@ -30,20 +30,6 @@ const galleryItems = [
     title: 'Klasická varianta',
     desc: 'Jemná chuť kravského sýra v tradičním pojetí.',
   },
-  {
-    thumb: 'https://picsum.photos/800/640?random=205',
-    full: 'https://picsum.photos/1200/900?random=205',
-    alt: 'Chilli korbáčky s výraznější chutí',
-    title: 'Ochucené varianty',
-    desc: 'Chilli, pepřové, česnekové i sladká paprika pro pestřejší výběr.',
-  },
-  {
-    thumb: 'https://picsum.photos/800/640?random=8',
-    full: 'https://picsum.photos/1200/900?random=8',
-    alt: 'Balíčky korbáčků připravené k objednávce',
-    title: 'Připraveno k objednávce',
-    desc: 'Korbáčky vhodné pro domácí mlsání i jako jedlý dárek.',
-  },
 ]
 
 export default function GallerySection({ onOpenLightbox }) {

@@ -22,13 +22,6 @@ export default function AboutSection() {
 
           <div className="about-cards shadow-soft">
             <div className="about-card-grid">
-              <div className="about-img-wrap">
-                <img
-                  src="https://picsum.photos/900/600?random=102"
-                  alt="Korbáčky položené na dřevěném prkénku"
-                  className="about-img"
-                />
-              </div>
               <div className="about-card">
                 <h3 className="about-card-title">Moravský původ</h3>
                 <p className="about-card-text">Regionální charakter a inspirace tradiční domácí výrobou.</p>
