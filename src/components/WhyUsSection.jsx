@@ -11,7 +11,7 @@ const features = [
 
 export default function WhyUsSection() {
   return (
-    <section id="proc-nase" className="whyus-section">
+    <section id="proc-nase" className="whyus-section whyus-section--cream">
       <div className="container whyus-inner">
         <div className="section-header">
           <h2 className="font-serif section-title">Proč právě naše korbáčky</h2>

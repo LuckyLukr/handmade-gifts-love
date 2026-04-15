@@ -2,6 +2,10 @@
   background-color: #FCF6EC;
 }
 
+.pricing-section--soft {
+  background-color: #FCF6EC;
+}
+
 .pricing-inner {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -46,7 +50,7 @@
 }
 
 .pricing-tbody tr {
-  border-top: 1px solid #efe2cf;
+  border-top: 1px solid #f0e4d3;
 }
 
 .pricing-td {

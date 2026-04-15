@@ -3,7 +3,7 @@ import '../styles/order.css'
 
 export default function OrderSection() {
   return (
-    <section id="objednat" className="order-section">
+    <section id="objednat" className="order-section order-section--soft">
       <div className="container order-centered-inner">
         <p className="order-centered-badge">Objednávka jednoduše</p>
         <h2 className="font-serif order-centered-title">Chcete si objednat korbáčky?</h2>

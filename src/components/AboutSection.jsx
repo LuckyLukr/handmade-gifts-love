@@ -3,7 +3,7 @@ import '../styles/about.css'
 
 export default function AboutSection() {
   return (
-    <section id="o-nas" className="ornament-divider about-section">
+    <section id="o-nas" className="ornament-divider about-section about-section--soft">
       <div className="container about-inner">
         <div className="about-grid">
           <div className="about-text">

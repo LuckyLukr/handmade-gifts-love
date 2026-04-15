@@ -3,7 +3,7 @@ import '../styles/manufacture.css'
 
 export default function ManufactureSection() {
   return (
-    <section id="vyroba" className="ornament-divider manufacture-section">
+    <section id="vyroba" className="ornament-divider manufacture-section manufacture-section--cream">
       <div className="container manufacture-inner">
         <div className="manufacture-grid">
           <div>

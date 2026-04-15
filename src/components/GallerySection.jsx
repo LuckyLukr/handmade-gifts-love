@@ -34,7 +34,7 @@ const galleryItems = [
 
 export default function GallerySection({ onOpenLightbox }) {
   return (
-    <section id="galerie" className="ornament-divider gallery-section">
+    <section id="galerie" className="ornament-divider gallery-section gallery-section--soft">
       <div className="container gallery-inner">
         <div className="section-header">
           <h2 className="font-serif section-title">Galerie korbáčků</h2>

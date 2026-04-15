@@ -11,7 +11,7 @@ const priceItems = [
 
 export default function PricingSection() {
   return (
-    <section id="cenik" className="pricing-section">
+    <section id="cenik" className="pricing-section pricing-section--soft">
       <div className="container pricing-inner">
         <div className="section-header">
           <h2 className="font-serif section-title">Ceník</h2>
